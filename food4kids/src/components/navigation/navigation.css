@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 div.nav{
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 3;
     top: 0;
     background: #22252C;
     color:#ffffff;
@@ -13,11 +13,15 @@ div.nav{
     text-align: center;
 
 }
-a.normal{
+.ontop{
+    z-index: 99999999;
+}
+.normal{
     text-decoration: none;
     float: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+font-family: 'Fira Sans', sans-serif;
+font-weight: bold;
+    font-size: 150%;
     display:inline-block;
     line-height: normal;
     color: #ffffff;
@@ -27,12 +31,12 @@ a.normal{
     -moz-transition:.7s;
     -webkit-transition:.7s;
     transition: .7s;
-    margin-left: 3%;
+    margin-left: 5.5%;
     margin-top: 3.5%;
     padding-right: 5%;
 
 }
-a.normal:hover{
+.normal:hover{
 
   text-decoration: none;
   color: #F8992D;
