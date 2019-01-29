@@ -231,7 +231,7 @@ html, body {
   height: 200px;
   width: 100%;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .arrow{
@@ -296,3 +296,6 @@ html, body {
   margin-bottom: 5%;
 }
 
+.github{
+  color: white;
+}

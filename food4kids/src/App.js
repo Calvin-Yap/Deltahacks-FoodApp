@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navigation from "./components/navigation/navigation";
-import { Button, Container, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Container, Row, Col } from 'reactstrap';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,25 +10,12 @@ import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMousePointer, faAppleAlt, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { faSmile } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-library.add(faMousePointer, faAppleAlt,faSmile,faShoppingBag);
+library.add(faMousePointer, faAppleAlt,faSmile,faShoppingBag, faGithub);
 
 
 class App extends Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      modal: false
-    };
-
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle() {
-    this.setState({
-      modal: !this.state.modal
-    });
-  }
   render() {
     const settings = {
       dots: true,
@@ -100,16 +87,16 @@ food. The following are the types of products we welcome as donations:
           <div className="row">
             <div className="column">
 
-              <h1 className="center">Produce</h1>
+              <AnchorLink offset='170' href='#produce'><h1 className="center">Produce</h1></AnchorLink>
                
               <img className="images" src="https://images.unsplash.com/photo-1452948491233-ad8a1ed01085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80" alt="Snow"/>
             </div>
             <div className="column">
-            <h1 className="center1">Canned Goods</h1>
+            <AnchorLink offset='170' href='#canned'><h1 className="center1">Canned Goods</h1></AnchorLink>
               <img className="images" src="https://images.unsplash.com/photo-1536755622971-7987b5104475?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="Forest"/>
             </div>
             <div className="column">
-            <h1 className="center2">Snacks</h1>
+            <AnchorLink offset='170' href='#snacks'><h1 className="center2">Snacks</h1></AnchorLink>
              
               <img className="images" src="https://d2814mmsvlryp1.cloudfront.net/wp-content/uploads/WGC-Granola-Bars-copy.jpg" alt="Mountains" />
             </div>
@@ -268,7 +255,8 @@ food. The following are the types of products we welcome as donations:
           </div>
 
           <footer className="end">
-            <p> project made from scratch using ReactJS and Aloglia </p>
+          <a className="github" href="https://github.com/Calvin-Yap/Deltahacks-FoodApp"><FontAwesomeIcon className="fontawesome" icon={['fab', 'github']} size="2x" /></a>
+            <p> project made from scratch using ReactJS and will futher be update with an Algolia database </p>
             <p> Coded by Calvin Yap and Designed by Ryan Huang</p>
           </footer>
 
